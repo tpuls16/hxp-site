@@ -1,1 +1,131 @@
-// Form validation here
+const form = document.getElementById("signup-form");
+
+function showError(input, message) {
+    const errorSpan = input.parentElement.querySelector(".field-error");
+    input.classList.add("input-error");
+    errorSpan.textContent = message;
+}
+
+function clearError(input) {
+    const errorSpan = input.parentElement.querySelector(".field-error");
+    input.classList.remove("input-error");
+    errorSpan.textContent = ""
+}
+
+function validateFullName(input) {
+    const value = input.value.trim();
+
+    if (value.length === 0) {
+        showError(input, "Builder name is required")
+        return false;
+    }
+
+    if (value.length < 2) {
+        showError(input, "Please enter the Builder's full name");
+        return false;
+    }
+
+    clearError(input);
+    return true;
+}
+
+function validateEmail(input) {
+    const value = input.value.trim();
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (value.length === 0) {
+        showError(input, "Email is required")
+        return false;
+    }
+
+    if (!emailPattern.test(value)) {
+        showError(input, "Please enter a valid email address");
+        return false;
+    }
+
+    clearError(input);
+    return true;
+}
+
+function validatePhone(input) {
+    const value = input.value.trim();
+    const phonePattern = /^\d{10}$/;
+
+    if (value.length === 0) {
+        showError(input, "Phone number is required");
+        return false;
+    }
+
+    if (!phonePattern.test(value)) {
+        showError(input, "Please enter a valid phone number");
+        return false;
+    }
+
+    clearError(input);
+    return true;
+}
+
+function validateEmergencyName(input) {
+    const value = input.value.trim();
+
+    if (value.length === 0) {
+        showError(input, "Emergency contact name is required")
+        return false;
+    }
+
+    if (value.length < 2) {
+        showError(input, "Please enter the emergency contact's full name");
+        return false;
+    }
+
+    clearError(input);
+    return true;
+}
+
+function validateEmergencyPhone(input) {
+    const value = input.value.trim();
+    const phonePattern = /^\d{10}$/;
+
+    if (value.length === 0) {
+        showError(input, "Emergency contact phone number is required")
+        return false;
+    }
+
+    clearError(input);
+    return true;
+}
+
+function validateWhy(input) {
+    const value = input.value.trim();
+
+    if (value.length === 0) {
+        showError(input, "Please tell us why you want to build with us.")
+        return false;
+    }
+
+    if (value.length < 30) {
+        showError(input, "Please provide at least a few sentences of why you want to build with us.")
+        return false;
+    }
+
+    clearError(input);
+    return true;
+}
+
+function validateForm() {
+    const fullName = document.getElementById("full-name");
+    const email = document.getElementById("email");
+    const phone = document.getElementById("phone");
+    const emergencyName = document.getElementById("emergency-contact-name");
+    const emergencyPhone = document.getElementById("emergency-contact-phone");
+    const why = document.getElementById("why");
+
+    const results = [
+        validateFullName(fullName),
+        validateEmail(email),
+        validatePhone(phone),
+        validateEmergencyName(emergencyName),
+        validateEmergencyPhone(emergencyPhone),
+        validateWhy(why)
+    ]
+}

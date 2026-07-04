@@ -154,27 +154,47 @@
                         <span id="emergency-contact-phone-error" class="field-error"></span>
                     </div>
 
-                    <div class="form-field">
-                        <label for="dietary">Dietary Restrictions - Leave blank if none. <span class="optional">(optional)</span></label>
-                        <textarea
-                          id="dietary"
-                          name="dietary"
-                          rows="3"
-                          placeholder="e.g. vegetarian, nut allergy"
-                        ></textarea>
-                        <span id="dietary-error" class="field-error"></span>
-                      </div>
+                    <fieldset class="form-field" id="dietary-fieldset">
+                        <legend>Dietary Restrictions (select all that apply)</legend>
 
-                      <div class="form-field">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="dietary" value="Vegetarian">
+                            Vegetarian
+                        </label>
+
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="dietary" value="Gluten-free">
+                            Gluten-free
+                        </label>
+
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="dietary" value="Nut allergy">
+                            Nut allergy
+                        </label>
+
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="dietary" value="Dairy-free">
+                            Dairy-free
+                        </label>
+
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="dietary" value="None">
+                            None
+                        </label>
+                        <span class="field-error"></span>
+                    </fieldset>
+
+
+                    <div class="form-field">
                         <label for="why">Why do you want to come? </label>
                         <textarea
-                          id="why"
-                          name="why"
-                          rows="5"
-                          required
+                            id="why"
+                            name="why"
+                            rows="5"
+                            required
                         ></textarea>
                         <span id="why-error" class="field-error"></span>
-                      </div>
+                    </div>
 
                       <button type="submit" class="submit-info-button">Submit Builder Sign-Up</button>
 
