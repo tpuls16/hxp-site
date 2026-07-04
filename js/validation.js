@@ -14,16 +14,24 @@ function clearError(input) {
 
 function validateFullName(input) {
     const value = input.value.trim();
+    const nameParts = value.split(/\s+/);
+    const allPartsLongEnough = nameParts.every((part) => part.length >= 2);
+
 
     if (value.length === 0) {
         showError(input, "Builder name is required")
         return false;
     }
 
-    if (value.length < 2) {
-        showError(input, "Please enter the Builder's full name");
+    if (nameParts.length < 2) {
+        showError(input, "Please enter first and last name");
         return false;
     }
+
+    if (!allPartsLongEnough) {
+        showError(input, "Please enter your full first and last name");
+        return false;
+      }
 
     clearError(input);
     return true;
@@ -67,16 +75,24 @@ function validatePhone(input) {
 
 function validateEmergencyName(input) {
     const value = input.value.trim();
+    const nameParts = value.split(/\s+/);
+    const allPartsLongEnough = nameParts.every((part) => part.length >= 2);
+
 
     if (value.length === 0) {
         showError(input, "Emergency contact name is required")
         return false;
     }
 
-    if (value.length < 2) {
-        showError(input, "Please enter the emergency contact's full name");
+    if (nameParts.length < 2) {
+        showError(input, "Please enter first and last name for emergency contact");
         return false;
     }
+
+    if (!allPartsLongEnough) {
+        showError(input, "Please enter your full first and last name");
+        return false;
+      }
 
     clearError(input);
     return true;
@@ -134,7 +150,7 @@ function validateForm() {
         validateWhy(why)
     ]
 
-    return results.every((pass) => passed === true);
+    return results.every((pass) => pass === true);
 }
 
 document.getElementById("full-name").addEventListener("blur", function () {
@@ -161,10 +177,10 @@ document.getElementById("full-name").addEventListener("blur", function () {
     validateWhy(document.getElementById("why"));
   });
 
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    if (validateForm()) {
-        console.log("Form is valid - ready to submit");
-    }
-  })
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  if (validateForm()) {
+  // Phase 6: submit.js will send data here
+    console.log("Form is valid — ready to submit!");
+  }
+});
