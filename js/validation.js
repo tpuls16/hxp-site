@@ -57,7 +57,7 @@ function validatePhone(input) {
     }
 
     if (!phonePattern.test(value)) {
-        showError(input, "Please enter a valid phone number");
+        showError(input, "Please enter a 10 digit phone number");
         return false;
     }
 
@@ -88,6 +88,11 @@ function validateEmergencyPhone(input) {
 
     if (value.length === 0) {
         showError(input, "Emergency contact phone number is required")
+        return false;
+    }
+
+    if (!phonePattern.test(value)) {
+        showError(input, "Please enter a 10 digit phone number");
         return false;
     }
 
@@ -128,4 +133,38 @@ function validateForm() {
         validateEmergencyPhone(emergencyPhone),
         validateWhy(why)
     ]
+
+    return results.every((pass) => passed === true);
 }
+
+document.getElementById("full-name").addEventListener("blur", function () {
+    validateFullName(document.getElementById("full-name"));
+  });
+  
+  document.getElementById("email").addEventListener("blur", function () {
+    validateEmail(document.getElementById("email"));
+  });
+  
+  document.getElementById("phone").addEventListener("blur", function () {
+    validatePhone(document.getElementById("phone"));
+  });
+  
+  document.getElementById("emergency-contact-name").addEventListener("blur", function () {
+    validateEmergencyName(document.getElementById("emergency-contact-name"));
+  });
+  
+  document.getElementById("emergency-contact-phone").addEventListener("blur", function () {
+    validateEmergencyPhone(document.getElementById("emergency-contact-phone"));
+  });
+  
+  document.getElementById("why").addEventListener("blur", function () {
+    validateWhy(document.getElementById("why"));
+  });
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    if (validateForm()) {
+        console.log("Form is valid - ready to submit");
+    }
+  })
