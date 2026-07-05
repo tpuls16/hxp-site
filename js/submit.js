@@ -20,7 +20,6 @@ function getFormData() {
         emergencyContactPhone: document.getElementById("emergency-contact-phone").value.trim(),
         dietary: getDietarySelections(),
         why: document.getElementById("why").value.trim(),
-        source: "microsite",
     };
 }
 

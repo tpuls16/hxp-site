@@ -74,6 +74,7 @@
 ```
 hxp-site/
 ├── index.html
+├── success.html
 ├── css/styles.css
 ├── js/validation.js
 ├── js/submit.js
