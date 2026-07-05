@@ -7,7 +7,7 @@
 - This is a microsite for scenario #2 of the HXP Tech Application.
 - A single trip signup page for prospective Builders with detailed information about the trip. 
 - **GitHub:** [https://github.com/tpuls16/hxp-site](https://github.com/tpuls16/hxp-site)
-- **Live Site:** Coming Soon
+- **Live Site:** **[tysonp-hxp-cebu-signup.netlify.app](http://tysonp-hxp-cebu-signup.netlify.app)**
 - **Sign-up data:** Google Sheet -> Signups
 
 ## What's included
@@ -22,17 +22,6 @@
 
 - **HTML/CSS/JS** - One webpage, one submission form, easy to manage
 - **Google Sheets backend** - Aligns with how HXP already uses Sheets for forms.
-
-
-
-## Planned next (before deployment)
-
-- POST to endpoint
-- Confirmation state after submission
-- Google sheets database
-- Live site deployment (Netlify)
-
-
 
 ## If I had more time
 
