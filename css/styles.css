@@ -51,6 +51,7 @@ footer {
 header{
     padding-top: var(--space-md);
     padding-bottom: var(--space-sm);
+    text-align: center;
 }
 
 header p {
@@ -155,7 +156,7 @@ margin-bottom: var(--space-sm);
 
 /* Form Section */
 #signup > p {
-    color: var(--color-text-muted);
+    color: var(--color-text);
     margin-bottom: var(--space-md);
   }
 
