@@ -32,7 +32,7 @@ async function submitSignup() {
     const payload = getFormData();
 
     try {
-        const response = await fetch(APPS_SCRIPT_URL, {
+        await fetch(APPS_SCRIPT_URL, {
           method: "POST",
           headers: {
             "Content-Type": "text/plain;charset=utf-8",
