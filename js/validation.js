@@ -180,7 +180,6 @@ document.getElementById("full-name").addEventListener("blur", function () {
 form.addEventListener("submit", function (event) {
   event.preventDefault();
   if (validateForm()) {
-  // Phase 6: submit.js will send data here
-    console.log("Form is valid — ready to submit!");
+    submitSignup();
   }
 });

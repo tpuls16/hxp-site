@@ -8,7 +8,7 @@
 - A single trip signup page for prospective Builders with detailed information about the trip. 
 - **GitHub:** [https://github.com/tpuls16/hxp-site](https://github.com/tpuls16/hxp-site)
 - **Live Site:** Coming Soon
-- **Sign-up data:** Coming Soon (Google Sheet)
+- **Sign-up data:** Google Sheet -> Signups
 
 ## What's included
 
@@ -40,6 +40,7 @@
 - Add stronger input validation and cover more input edge cases
 - Separate trip information, itinerary, and sign-up form into individual pages
 - Automated testing to replace time-consuming manual tests
+- Move Google Script URL to a private hidden variable
 
 **Why Google Sheets?** HXP already shared a response form with me using Google Sheets. It is also simple and fast, although something with more encryption and security would be used in a production site.
 
