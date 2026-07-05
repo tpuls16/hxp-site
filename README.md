@@ -7,8 +7,8 @@
 - This is a microsite for scenario #2 of the HXP Tech Application.
 - A single trip signup page for prospective Builders with detailed information about the trip. 
 - **GitHub:** [https://github.com/tpuls16/hxp-site](https://github.com/tpuls16/hxp-site)
-- **Live Site:** **[tysonp-hxp-cebu-signup.netlify.app](http://tysonp-hxp-cebu-signup.netlify.app)**
-- **Sign-up data:** Google Sheet -> Signups
+- **Live Site:** [tysonp-hxp-cebu-signup.netlify.app](http://tysonp-hxp-cebu-signup.netlify.app)
+- **Sign-up data:** [Google Sheet](https://docs.google.com/spreadsheets/d/1N54XN70m1vD0pCD2AjRMkrNeDM_Bk_JUEKGlQ6PE-Hk/edit?usp=sharing)
 
 ## What's included
 
