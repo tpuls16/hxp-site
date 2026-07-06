@@ -1,4 +1,4 @@
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxoaXvoX3Ge3728wm7yjDYF8TVCJT7Fo-UghM3zKNUhwRUFaWg2xL24n4CteAsJbUFu6w/exec";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwpZVLpYhwAFV3rJNlQsyNyRqZPGQ7T8oVaiVh11bCXpLh4CNqQ_DPgrCTJZ1mFe6FW8A/exec";
 
 function getDietarySelections() {
     const checked = document.querySelectorAll('input[name="dietary"]:checked');
